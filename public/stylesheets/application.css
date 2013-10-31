@@ -5,8 +5,12 @@ div.box, div.cell {
 }
 
 .cell input {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+div.box {
+  outline: 3px solid black;
 }
 
 #sudoku {
@@ -18,3 +22,48 @@ body {
   text-align: center;
   font-family: Arial;
 }
+
+.incorrect {
+  background-color: red;
+}
+
+.value-provided {
+  background-color: #DDD;
+}
+
+.correct-guess {
+	background-color: green;
+}
+
+#value-provided {
+  background-color: #DDD;
+}
+
+#correct-guess {
+	background-color: green;
+}
+
+#incorrect {
+  background-color: red;
+}
+
+p {
+	text-align:left;
+}
+
+h3 {
+	text-align:left;
+}
+
+.key_box {
+width: 30px;
+height: 30px;
+display: inline-block;
+
+vertical-align: middle;
+}
+
+.key_def {
+display: inline-block;
+}
+
