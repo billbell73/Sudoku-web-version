@@ -29,7 +29,7 @@ body {
 }
 
 .value-provided {
-  background-color: #DDD;
+  background-color: #FFD175;
 }
 
 .correct-guess {
@@ -37,7 +37,7 @@ body {
 }
 
 #value-provided {
-  background-color: #DDD;
+  background-color: #FFD175;
 }
 
 #correct-guess {
