@@ -7,6 +7,7 @@ div.box, div.cell {
 .cell input {
   width: 40px;
   height: 40px;
+  text-align: center;
 }
 
 div.box {
@@ -20,11 +21,11 @@ div.box {
 
 body {
   text-align: center;
-  font-family: Arial;
+  font-family: "Trebuchet MS";
 }
 
 .incorrect {
-  background-color: red;
+  background-color: #E68A8A;
 }
 
 .value-provided {
@@ -32,7 +33,7 @@ body {
 }
 
 .correct-guess {
-	background-color: green;
+	background-color: #85FF85;
 }
 
 #value-provided {
@@ -40,11 +41,11 @@ body {
 }
 
 #correct-guess {
-	background-color: green;
+	background-color: #85FF85;
 }
 
 #incorrect {
-  background-color: red;
+  background-color: #E68A8A;
 }
 
 p {
@@ -59,11 +60,22 @@ h3 {
 width: 30px;
 height: 30px;
 display: inline-block;
-
-vertical-align: middle;
+position: relative;
+float: left;
 }
 
 .key_def {
+/*display: inline-block;*/
+float: left;
+padding: 5 0 0 5px;
+}
+
+.key {
 display: inline-block;
+float: left;
+}
+
+button {
+	margin: 15px;
 }
 
