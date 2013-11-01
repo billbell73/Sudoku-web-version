@@ -1,0 +1,17 @@
+# Logfile created on 2013-11-01 18:30:51 +0000 by logger.rb/36483
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Starting the New Relic agent in "development" environment.
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Reading configuration from config/newrelic.yml
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Enabling the Request Sampler.
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Enabling the Request Sampler.
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Environment: development
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Dispatcher: unicorn
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Application: My Application
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] WARN : Agent configured not to send data in this environment.
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Installing Net instrumentation
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Installing Sinatra instrumentation
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Installing deferred Rack instrumentation
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Installing Unicorn instrumentation
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Detected Unicorn, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Finished instrumentation
+[11/01/13 18:30:51 +0000 Wills-MacBook-Pro.local (16382)] INFO : Doing deferred dependency-detection before Rack startup
