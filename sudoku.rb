@@ -21,6 +21,11 @@ def random_sudoku
     sudoku.to_s.chars
 end
 
+def solve_user_inputted puzzle
+  sudoku = Sudoku.new(puzzle)
+  sudoku.solve!
+  sudoku.to_s.chars
+end
 
 def puzzle sudoku
   puzzle = []
@@ -35,12 +40,25 @@ def puzzle sudoku
   puzzle
 end
 
+def blank_sudoku
+  81.times.inject([]){ |memo| memo << "0" }
+end
+
 get '/' do
   prepare_to_check_solution
   generate_new_puzzle_if_necessary
   @current_solution = session[:current_solution] #|| session[:puzzle]
   @solution = session[:solution]
   @puzzle = session[:puzzle]
+  @button_text = "Check values inputted so far"
+  erb :index
+end
+
+get '/solver' do
+  @current_solution = blank_sudoku
+  @solution = blank_sudoku
+  @puzzle = blank_sudoku
+  @button_text = "Load inputted puzzle"
   erb :index
 end
 
@@ -57,6 +75,19 @@ post '/' do
   session[:check_solution] = true
   redirect to("/")
 end
+
+post '/solver' do
+  cells = box_order_to_row_order(params["cell"])  
+  p cells
+  puzzle = cells.map{|value| value.to_i }.join
+  sudoku = solve_user_inputted puzzle
+  session[:current_solution] = puzzle
+  session[:puzzle] = puzzle
+  session[:solution] = sudoku
+  redirect to("/")
+end
+
+
 
 def box_order_to_row_order(cells)
   boxes = cells.each_slice(9).to_a

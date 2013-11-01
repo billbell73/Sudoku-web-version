@@ -9,7 +9,7 @@
 
 <div class="whole_thing">
   <span id="sudoku">
-    <form action="/" method="post">
+    <form method="post">
       <!-- one div for each row -->
       <% 3.times do |row| %>
         <div class='row'>
@@ -34,7 +34,7 @@
             <% end %>
           </div>
         <% end %>
-        <button>Check solution</button>
+        <button><%= @button_text %></button>
     </form>
   </span>
 
