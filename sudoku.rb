@@ -1,10 +1,18 @@
-
-
 require 'sinatra'
+# require 'sinatra/partial' 
+require 'rack-flash'
 require_relative './lib/sudoku'
 require_relative './lib/cell'
 
+
 enable :sessions
+set :session_secret, "I'm the secret key to sign the cookie"
+use Rack::Flash
+# set :partial_template_engine, :erb
+
+
+
+
 
 def random_sudoku
     seed = (1..9).to_a.shuffle + Array.new(81-9, 0)
@@ -39,7 +47,7 @@ end
 get '/solution' do
   @current_solution = session[:solution]
   @solution = session[:solution]
-  @puzzle = session[:solution]
+  @puzzle = session[:puzzle]
   erb :index
 end
 
@@ -74,6 +82,12 @@ end
 
 def prepare_to_check_solution
   @check_solution = session[:check_solution]
+  if @check_solution
+    flash[:key_headline] = "Key to colours"
+    flash[:incorrect_msg] = "Guessed wrong"
+    flash[:value_provided] = "Value provided in original puzzle"
+    flash[:inputted_correctly] = "Correct value inputted.  Woohoo!"
+  end
   session[:check_solution] = nil
 end
 

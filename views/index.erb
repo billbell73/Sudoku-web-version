@@ -7,59 +7,70 @@
 <body>
 <h2> Traffic-Light Sudoku </h2>
 
-<div id="sudoku">
-  <form action="/" method="post">
-    <!-- one div for each row -->
-    <% 3.times do |row| %>
-      <div class='row'>
-          <!-- we want to create separate div elements for boxes to style them using CSS -->
-        <% 3.times do |box| %>
-            <div class="box">
-           <!-- each box will have nine cells -->
-           <% 3.times do |cell_row| %>
-                <div class="cell-row">
-               <% 3.times do |cell| %>
-                    <div class="cell">
-                      <!-- every cell will have an input field -->
-                      <% cell_index = row * 27 + box * 3 + cell_row * 9 + cell %>
-                      <% colour_class = colour_class(@check_solution, @puzzle[cell_index], @current_solution[cell_index], @solution[cell_index])  %>                      
-                      <% cell_value = cell_value(@current_solution[cell_index]) %>
-                      <input type="text" name="cell[]" maxlength="1" autocomplete="off" value="<%= cell_value %>" class="<%= colour_class %>">
-                    </div>
-                  <% end %>
-                </div>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
-      <button>Check solution</button>
+<div class="whole_thing">
+  <span id="sudoku">
+    <form action="/" method="post">
+      <!-- one div for each row -->
+      <% 3.times do |row| %>
+        <div class='row'>
+            <!-- we want to create separate div elements for boxes to style them using CSS -->
+          <% 3.times do |box| %>
+              <div class="box">
+             <!-- each box will have nine cells -->
+             <% 3.times do |cell_row| %>
+                  <div class="cell-row">
+                 <% 3.times do |cell| %>
+                      <div class="cell">
+                        <!-- every cell will have an input field -->
+                        <% cell_index = row * 27 + box * 3 + cell_row * 9 + cell %>
+                        <% colour_class = colour_class(@check_solution, @puzzle[cell_index], @current_solution[cell_index], @solution[cell_index])  %>                      
+                        <% cell_value = cell_value(@current_solution[cell_index]) %>
+                        <input type="text" name="cell[]" maxlength="1" autocomplete="off" value="<%= cell_value %>" class="<%= colour_class %>">
+                      </div>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+        <button>Check solution</button>
     </form>
-  </div>
-  
- 
-  <div>
-    <h3>Key to colours</h3>
-  </div>
-
-  <div class="key">
-
-    <div class="key_box" id="incorrect"></div>
-    <div class="key_def">Guessed wrong</div>
-    <br>
-    <br>
+  </span>
 
 
-    
-    <div class="key_box" id="value-provided"></div>
-    <div class="key_def"> Value provided in original puzzle </div>
-    <br>
-    <br>
 
-    
-    <div class="key_box" id="correct-guess"></div>
-    <div class="key_def"> Correct value inputted.  Woohoo!</div>
-  </div> 
+  <span class="key_whole">
+    <div id="flash">
+      <h3><%= flash[:key_headline] %></h3>
+    </div>
+
+    <div class="key">
+
+      <div class="key_box" id="incorrect"></div>
+      <div class="key_def" id="flash">
+        <%= flash[:incorrect_msg] %>
+        </div>
+      <br>
+      <br>
+
+
+      
+      <div class="key_box" id="value-provided"></div>
+      <div class="key_def" id="flash">
+        <%= flash[:value_provided] %>
+        </div>
+      <br>
+      <br>
+
+      
+      <div class="key_box" id="correct-guess"></div>
+      <div class="key_def" id="flash">
+        <%= flash[:inputted_correctly] %>
+        </div>
+    </div> 
+  </span>
+</div>
   
 </body>
 </html>

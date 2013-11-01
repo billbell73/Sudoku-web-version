@@ -16,7 +16,9 @@ div.box {
 
 #sudoku {
   font-size: 0;
-  text-align: center;
+  text-align: left;
+  padding: 40px;
+  display: inline-block;
 }
 
 body {
@@ -77,5 +79,15 @@ float: left;
 
 button {
 	margin: 15px;
+}
+
+.whole_thing {
+display: inline-block;
+float: left;
+}
+
+.key_whole {
+display: inline-block;
+float: left;
 }
 
