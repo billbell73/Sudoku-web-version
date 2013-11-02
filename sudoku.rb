@@ -126,16 +126,21 @@ end
 
 helpers do
 
-  def colour_class(solution_to_check, puzzle_value, current_solution_value, solution_value)
+  def colour_class(check_button_just_clicked, puzzle_value, current_solution_value, solution_value)
     zero_on_original_puzzle = puzzle_value == "0"
     now_not_zero = current_solution_value.to_i != 0
     different_from_solution = current_solution_value != solution_value
 
-    if solution_to_check && 
+    if check_button_just_clicked && 
         zero_on_original_puzzle && 
         now_not_zero && 
         different_from_solution
-      'incorrect'
+      'incorrect-just-entered'
+    elsif !check_button_just_clicked && 
+        zero_on_original_puzzle && 
+        now_not_zero && 
+        different_from_solution
+        'animated rotateOut'
     elsif zero_on_original_puzzle && 
         now_not_zero && 
         !different_from_solution

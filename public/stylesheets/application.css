@@ -18,7 +18,8 @@ div.box {
   font-size: 0;
   text-align: left;
   padding: 40px;
-  display: inline-block;
+  /*display: inline-block;*/
+  float: left;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
   font-family: "Trebuchet MS";
 }
 
-.incorrect {
+.incorrect-just-entered {
   background-color: #E68A8A;
 }
 
@@ -46,7 +47,7 @@ body {
 	background-color: #85FF85;
 }
 
-#incorrect {
+#incorrect-just-entered {
   background-color: #E68A8A;
 }
 
@@ -86,8 +87,75 @@ display: inline-block;
 float: left;
 }
 
-/*.key_whole {
+.key_whole {
 display: inline-block;
+/*vertical-align: center;*/
 float: left;
-}*/
+}
+
+
+/**/
+
+
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}.animated.hinge{-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}@-webkit-keyframes rotateOut {
+	0% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}	100% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: rotate(200deg);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes rotateOut {
+	0% {
+		-moz-transform-origin: center center;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-moz-transform-origin: center center;
+		-moz-transform: rotate(200deg);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes rotateOut {
+	0% {
+		-o-transform-origin: center center;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-o-transform-origin: center center;
+		-o-transform: rotate(200deg);
+		opacity: 0;
+	}
+}
+
+@keyframes rotateOut {
+	0% {
+		transform-origin: center center;
+		transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		transform-origin: center center;
+		transform: rotate(200deg);
+		opacity: 0;
+	}
+}
+
+.rotateOut {
+	-webkit-animation-name: rotateOut;
+	-moz-animation-name: rotateOut;
+	-o-animation-name: rotateOut;
+	animation-name: rotateOut;
+}
+
 

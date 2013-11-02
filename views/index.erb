@@ -7,7 +7,6 @@
 <body>
 <h2> Traffic-Light Sudoku </h2>
 
-<div class="whole_thing">
   <span id="sudoku">
     <form method="post">
       <!-- one div for each row -->
@@ -19,20 +18,18 @@
 
 
   <span class="key_whole">
-    <div id="flash">
-      <h3><%= flash[:key_headline] %></h3>
-    </div>
+   <!-- <div class="animated rotateOut">
+      <h3>Hello</h3>
+    </div> -->
 
     <div class="key">
 
-      <div class="key_box" id="incorrect"></div>
+      <div class="key_box" id="incorrect-just-entered"></div>
       <div class="key_def" id="flash">
         <%= flash[:incorrect_msg] %>
         </div>
       <br>
       <br>
-
-
       
       <div class="key_box" id="value-provided"></div>
       <div class="key_def" id="flash">
@@ -40,7 +37,6 @@
         </div>
       <br>
       <br>
-
       
       <div class="key_box" id="correct-guess"></div>
       <div class="key_def" id="flash">
@@ -48,7 +44,7 @@
         </div>
     </div> 
   </span>
-</div>
+
   
 </body>
 </html>
