@@ -12,10 +12,6 @@ set :session_secret, "I'm the secret key to sign the cookie"
 use Rack::Flash
 set :partial_template_engine, :erb
 
-
-
-
-
 def random_sudoku
     seed = (1..9).to_a.shuffle + Array.new(81-9, 0)
     sudoku = Sudoku.new(seed.join)
@@ -116,10 +112,11 @@ end
 def prepare_to_check_solution
   @check_solution = session[:check_solution]
   if @check_solution
-    flash[:key_headline] = "Key to colours"
     flash[:incorrect_msg] = "Guessed wrong"
-    flash[:value_provided] = "Value provided in original puzzle"
+    flash[:value_provided] = "Valriginal puzzle"
     flash[:inputted_correctly] = "Correct value inputted.  Woohoo!"
+  # else
+  # # if class is animated rotateout replace with 0
   end
   session[:check_solution] = nil
 end

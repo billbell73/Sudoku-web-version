@@ -1,8 +1,6 @@
 div.box, div.cell {
   display: inline-block;
-  /*padding: 3;*/
-  /*background-color: aqua;*/
-}
+ }
 
 .cell input {
   width: 40px;
@@ -18,7 +16,6 @@ div.box {
   font-size: 0;
   text-align: left;
   padding: 40px;
-  /*display: inline-block;*/
   float: left;
 }
 
@@ -109,7 +106,7 @@ float: left;
 	}
 }
 
-@-moz-keyframes rotateOut {
+/*@-moz-keyframes rotateOut {
 	0% {
 		-moz-transform-origin: center center;
 		-moz-transform: rotate(0);
@@ -149,7 +146,7 @@ float: left;
 		transform: rotate(200deg);
 		opacity: 0;
 	}
-}
+}*/
 
 .rotateOut {
 	-webkit-animation-name: rotateOut;
