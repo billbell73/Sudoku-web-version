@@ -1,3 +1,44 @@
+body {
+  font-family: "Trebuchet MS";
+}
+
+.container {
+	margin-left: 5em;
+}
+
+h2 {
+	margin-top: 1em;
+	margin-left: 2em;
+	display: inline-block;
+	vertical-align: top
+}
+
+.logo {
+display: inline-block;
+margin-top: 1em;
+margin-left: 3em;
+}
+
+.key_box_red {
+width: 30px;
+height: 30px;
+background-color: #E68A8A;
+margin-bottom: 8px;
+}
+
+.key_box_amber {
+width: 30px;
+height: 30px;
+background-color: #FFD175;
+margin-bottom: 8px;
+}
+
+.key_box_green {
+width: 30px;
+height: 30px;
+background-color: #85FF85;
+}
+
 div.box, div.cell {
   display: inline-block;
  }
@@ -16,13 +57,11 @@ div.box {
   font-size: 0;
   text-align: left;
   padding: 40px;
-  float: left;
+  display: block;
 }
 
-body {
-  text-align: center;
-  font-family: "Trebuchet MS";
-}
+
+
 
 .incorrect-just-entered {
   background-color: #E68A8A;
@@ -54,18 +93,23 @@ p {
 
 h3 {
 	text-align:left;
+	display: inline;
 }
 
-.key_box {
+/*.key_box {
 width: 30px;
 height: 30px;
-display: inline-block;
+display: block;
 position: relative;
 float: left;
-}
+}*/
+
+
+
+
 
 .key_def {
-/*display: inline-block;*/
+display: inline-block;
 float: left;
 padding: 5 0 0 5px;
 }
@@ -86,20 +130,22 @@ float: left;
 
 .key_whole {
 display: inline-block;
-/*vertical-align: center;*/
+vertical-align: center;
 float: left;
 }
 
-/*button {
+
+
+button {
 	display: inline;
-}*/
+}
 
 form {
 	display: inline;
 }
 
 
-/**/
+
 
 
 .animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}.animated.hinge{-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}@-webkit-keyframes rotateOut {

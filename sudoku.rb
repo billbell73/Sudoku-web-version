@@ -56,7 +56,7 @@ get '/solver' do
   @current_solution = blank_sudoku
   @solution = blank_sudoku
   @puzzle = blank_sudoku
-  @button_text = "Load puzzle inputted"
+  @button_text = "Load inputted puzzle"
   erb :solver
 end
 

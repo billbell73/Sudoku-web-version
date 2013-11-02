@@ -4,23 +4,38 @@
   <!-- link to the CSS stylesheet -->
   <link href="/stylesheets/application.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-<h2> Traffic-Light Sudoku </h2>
+
+<div class="container">
+
+  <section class="logo">
+    <div class="key_box_red"></div>
+    <div class="key_box_amber" id="value-provided"></div>
+    <div class="key_box_green" id="correct-guess"></div>
+  </section>
+
+  <h2> Stop-go-ku </h2>
+
+  <section class="logo">
+    <div class="key_box_red"></div>
+    <div class="key_box_amber" id="value-provided"></div>
+    <div class="key_box_green" id="correct-guess"></div>
+  </section>
+
+</div>
 
   <span id="sudoku">
     <form method="post">
       <!-- one div for each row -->
       <%= partial :grid %>
         
-    
+
     <%= yield %>
 
 
-  <span class="key_whole">
-   <!-- <div class="animated rotateOut">
-      <h3>Hello</h3>
-    </div> -->
-
+  <section class="key_whole">
+  
     <div class="key">
 
       <div class="key_box" id="incorrect-just-entered"></div>
@@ -42,7 +57,7 @@
         <%= flash[:inputted_correctly] %>
         </div>
     </div> 
-  </span>
+  </section>
 
   
 </body>
