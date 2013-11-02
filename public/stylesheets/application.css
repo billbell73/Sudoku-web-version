@@ -90,6 +90,14 @@ display: inline-block;
 float: left;
 }
 
+/*button {
+	display: inline;
+}*/
+
+form {
+	display: inline;
+}
+
 
 /**/
 

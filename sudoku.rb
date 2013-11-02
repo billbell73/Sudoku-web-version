@@ -48,7 +48,7 @@ get '/' do
   @current_solution = session[:current_solution] #|| session[:puzzle]
   @solution = session[:solution]
   @puzzle = session[:puzzle]
-  @button_text = "Check values inputted so far"
+  @button_text = "Intermediate Check"
   erb :index
 end
 
@@ -113,8 +113,8 @@ def prepare_to_check_solution
   @check_solution = session[:check_solution]
   if @check_solution
     flash[:incorrect_msg] = "Guessed wrong"
-    flash[:value_provided] = "Valriginal puzzle"
-    flash[:inputted_correctly] = "Correct value inputted.  Woohoo!"
+    flash[:value_provided] = "Original puzzle"
+    flash[:inputted_correctly] = "Correct.  Woohoo!"
   # else
   # # if class is animated rotateout replace with 0
   end
