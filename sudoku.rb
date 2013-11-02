@@ -48,7 +48,7 @@ get '/' do
   @current_solution = session[:current_solution] #|| session[:puzzle]
   @solution = session[:solution]
   @puzzle = session[:puzzle]
-  @button_text = "Intermediate Check"
+  @button_text = "Check values entered"
   erb :index
 end
 
@@ -56,8 +56,8 @@ get '/solver' do
   @current_solution = blank_sudoku
   @solution = blank_sudoku
   @puzzle = blank_sudoku
-  @button_text = "Load inputted puzzle"
-  erb :index
+  @button_text = "Load puzzle inputted"
+  erb :solver
 end
 
 get '/solution' do
