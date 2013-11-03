@@ -1,63 +1,76 @@
 <html>
 <head>
   <title>Sudoku Game</title>   
-  <!-- link to the CSS stylesheet -->
   <link href="/stylesheets/application.css" rel="stylesheet" type="text/css">
+  <style>
+    a:link {color:#E68A8A;}    /* unvisited link */
+    a:visited {color:#E68A8A;} /* visited link */
+    a:hover {color:#FFD175;}   /* mouse over link */
+    a:active {color:#E68A8A;}  /* selected link */
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="container-logo">
 
   <section class="logo">
     <div class="key_box_red"></div>
-    <div class="key_box_amber" id="value-provided"></div>
-    <div class="key_box_green" id="correct-guess"></div>
+    <div class="key_box_amber"></div>
+    <div class="key_box_green"></div>
   </section>
 
-  <h2> Stop-go-ku </h2>
+  <h2> 
+    <span id="red">Stop</span>
+    -
+    <span id="green">go</span>
+    -
+    <span id="amber">ku</span>
+  </h2>
+
 
   <section class="logo">
     <div class="key_box_red"></div>
-    <div class="key_box_amber" id="value-provided"></div>
-    <div class="key_box_green" id="correct-guess"></div>
+    <div class="key_box_amber"></div>
+    <div class="key_box_green"></div>
   </section>
 
 </div>
 
-  <span id="sudoku">
-    <form method="post">
-      <!-- one div for each row -->
-      <%= partial :grid %>
-        
+<main id="sudoku">
+  <form method="post">
+    
+    <%= partial :grid %>
 
     <%= yield %>
 
+<!-- the pages yielded to close the form and span tags, and open a nav tag -->
 
-  <section class="key_whole">
+  <a href="/">Generate Easy Puzzle</a>
+  <a href="/">Generate Hard Puzzle</a>
+  <a href="/">Try new Swivel-doku<sup>TM</sup></a>
+  <a href="/solver">Load your own puzzle</a>
+
+</nav>
+
+<section class="key_whole">
   
-    <div class="key">
-
-      <div class="key_box" id="incorrect-just-entered"></div>
-      <div class="key_def" id="flash">
-        <%= flash[:incorrect_msg] %>
-        </div>
-      <br>
-      <br>
-      
-      <div class="key_box" id="value-provided"></div>
-      <div class="key_def" id="flash">
-        <%= flash[:value_provided] %>
-        </div>
-      <br>
-      <br>
-      
-      <div class="key_box" id="correct-guess"></div>
-      <div class="key_def" id="flash">
-        <%= flash[:inputted_correctly] %>
-        </div>
-    </div> 
-  </section>
+  <div class="key_box_red" id="flash"></div>
+  <div class="key_def" id="flash">
+    <%= flash[:incorrect_msg] %>
+  </div>
+  
+  <div class="key_box_amber"></div>
+  <div class="key_def" id="flash">
+    <%= flash[:value_provided] %>
+  </div>
+  
+  <div class="key_box_green"></div>
+  <div class="key_def" id="flash">
+    <%= flash[:inputted_correctly] %>
+  </div>
+  
+</section>
 
   
 </body>

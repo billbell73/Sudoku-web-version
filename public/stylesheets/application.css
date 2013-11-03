@@ -2,41 +2,72 @@ body {
   font-family: "Trebuchet MS";
 }
 
-.container {
+.container-logo {
 	margin-left: 5em;
+}
+
+.logo {
+	display: inline-block;
+	margin-top: 1em;
+	margin-left: 3em;
+}
+
+.key_box_red {
+	width: 30px;
+	height: 30px;
+	background-color: #E68A8A;
+	margin-bottom: 8px;
+}
+
+.key_box_amber {
+	width: 30px;
+	height: 30px;
+	background-color: #FFD175;
+	margin-bottom: 8px;
+}
+
+.key_box_green {
+	width: 30px;
+	height: 30px;
+	background-color: #19D1A3;
 }
 
 h2 {
 	margin-top: 1em;
 	margin-left: 2em;
 	display: inline-block;
+	vertical-align: top;
+}
+
+#red {
+	color:#E68A8A;
+}
+
+#amber {
+	color: #FFD175;
+}
+
+#green {
+	color: #19D1A3;
+}
+
+main {
+  font-size: 0;
+  display: inline-block;
+  margin-right: 5em;
+}
+
+nav {
+	display: inline-block;
 	vertical-align: top
 }
 
-.logo {
-display: inline-block;
-margin-top: 1em;
-margin-left: 3em;
+a {
+	display: block;
 }
 
-.key_box_red {
-width: 30px;
-height: 30px;
-background-color: #E68A8A;
-margin-bottom: 8px;
-}
-
-.key_box_amber {
-width: 30px;
-height: 30px;
-background-color: #FFD175;
-margin-bottom: 8px;
-}
-
-.key_box_green {
-width: 30px;
-height: 30px;
-background-color: #85FF85;
+sup {
+	font-size: 10;
 }
 
 div.box, div.cell {
@@ -53,16 +84,6 @@ div.box {
   outline: 3px solid black;
 }
 
-#sudoku {
-  font-size: 0;
-  text-align: left;
-  padding: 40px;
-  display: block;
-}
-
-
-
-
 .incorrect-just-entered {
   background-color: #E68A8A;
 }
@@ -72,10 +93,10 @@ div.box {
 }
 
 .correct-guess {
-	background-color: #85FF85;
+	background-color: #19D1A3;
 }
 
-#value-provided {
+/*#value-provided {
   background-color: #FFD175;
 }
 
@@ -86,7 +107,7 @@ div.box {
 #incorrect-just-entered {
   background-color: #E68A8A;
 }
-
+*/
 p {
 	text-align:left;
 }
@@ -96,31 +117,8 @@ h3 {
 	display: inline;
 }
 
-/*.key_box {
-width: 30px;
-height: 30px;
-display: block;
-position: relative;
-float: left;
-}*/
-
-
-
-
-
 .key_def {
 display: inline-block;
-float: left;
-padding: 5 0 0 5px;
-}
-
-.key {
-display: inline-block;
-float: left;
-}
-
-button {
-	margin: 15px;
 }
 
 .whole_thing {
@@ -134,10 +132,9 @@ vertical-align: center;
 float: left;
 }
 
-
-
 button {
 	display: inline;
+	margin: 15px;
 }
 
 form {
