@@ -42,14 +42,43 @@ def blank_sudoku
   81.times.inject([]){ |memo| memo << "0" }
 end
 
+def replace_wrong_guesses_with_zero solution, current_solution
+  (0..80).each do |index|
+    if solution[index].to_i != current_solution[index].to_i
+        current_solution[index] = "0"
+    end
+  end
+end
+
 get '/' do
   prepare_to_check_solution
   generate_new_puzzle_if_necessary
   @current_solution = session[:current_solution] #|| session[:puzzle]
   @solution = session[:solution]
   @puzzle = session[:puzzle]
+  if @wrong_guesses_third_time
+    replace_wrong_guesses_with_zero @solution, @current_solution
+  end
   @button_text = "Check values entered"
   erb :index
+end
+
+def prepare_to_check_solution
+  @check_solution = session[:check_solution]
+  @wrong_guesses_second_time = session[:wrong_guesses_second_time]
+  session[:wrong_guesses_second_time] = nil
+  @wrong_guesses_third_time = session[:wrong_guesses_third_time]
+  session[:wrong_guesses_third_time] = nil
+  if @check_solution
+    flash[:incorrect_msg] = "Guessed wrong"
+    flash[:value_provided] = "Original puzzle"
+    flash[:inputted_correctly] = "Correct.  Woohoo!"
+    session[:wrong_guesses_second_time] = true
+  end
+  if @wrong_guesses_second_time
+    session[:wrong_guesses_third_time] = true
+  end
+  session[:check_solution] = nil
 end
 
 get '/solver' do
@@ -109,17 +138,7 @@ def generate_new_puzzle_if_necessary
   session[:current_solution] = session[:puzzle]    
 end
 
-def prepare_to_check_solution
-  @check_solution = session[:check_solution]
-  if @check_solution
-    flash[:incorrect_msg] = "Guessed wrong"
-    flash[:value_provided] = "Original puzzle"
-    flash[:inputted_correctly] = "Correct.  Woohoo!"
-  # else
-  # # if class is animated rotateout replace with 0
-  end
-  session[:check_solution] = nil
-end
+
 
 helpers do
 
