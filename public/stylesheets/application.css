@@ -4,6 +4,7 @@ body {
 
 .container-logo {
 	margin-left: 5em;
+	margin-bottom: 1em;
 }
 
 .logo {
@@ -127,9 +128,7 @@ float: left;
 }
 
 .key_whole {
-display: inline;
-vertical-align: center;
-float: left;
+display: inline-block;
 }
 
 button {
