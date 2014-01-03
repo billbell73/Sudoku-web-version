@@ -60,6 +60,7 @@ get '/' do
     replace_wrong_guesses_with_zero @solution, @current_solution
   end
   @button_text = "Check values entered"
+  @action = "/"
   erb :index
 end
 
@@ -86,6 +87,7 @@ get '/solver' do
   @solution = blank_sudoku
   @puzzle = blank_sudoku
   @button_text = "Load inputted puzzle"
+  @action = "/solver"
   erb :solver
 end
 
@@ -93,6 +95,8 @@ get '/solution' do
   @current_solution = session[:solution]
   @solution = session[:solution]
   @puzzle = session[:puzzle]
+  @button_text = "Back to incomplete puzzle"
+  @action = "/"
   erb :solution
 end
 
