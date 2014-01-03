@@ -6,7 +6,7 @@
     a:link {color:#E68A8A;}    /* unvisited link */
     a:visited {color:#E68A8A;} /* visited link */
     a:hover {color:#FFD175;}   /* mouse over link */
-    a:active {color:#E68A8A;}  /* selected link */
+    a:active {color:#19D1A3;}  /* selected link */
   </style>
 </head>
 
@@ -38,13 +38,20 @@
 </div>
 
 <main id="sudoku">
+
   <form action=<%= @action %> method="post">
     
     <%= partial :grid %>
 
-    <%= yield %>
+    
 
-<!-- the pages yielded to close the main and form tags, and open a nav tag -->
+    <button><%= @button_text %></button>
+  </form>
+  <%= yield %>
+
+</main>
+
+<nav>
 
   <a href="/">Generate Easy Puzzle</a>
   <a href="/">Generate Hard Puzzle</a>
