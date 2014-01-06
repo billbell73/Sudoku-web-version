@@ -6,7 +6,9 @@ require 'newrelic_rpm'
 require_relative 'models/sudoku'
 require_relative 'models/cell'
 
-
+require_relative 'controllers/application'
+require_relative 'controllers/solver'
+require_relative 'controllers/solution'
 
 
 
@@ -56,19 +58,7 @@ def replace_wrong_guesses_with_zero solution, current_solution
   end
 end
 
-get '/' do
-  prepare_to_check_solution
-  generate_new_puzzle_if_necessary
-  @current_solution = session[:current_solution] #|| session[:puzzle]
-  @solution = session[:solution]
-  @puzzle = session[:puzzle]
-  if @wrong_guesses_third_time
-    replace_wrong_guesses_with_zero @solution, @current_solution
-  end
-  @button_text = "Check values entered"
-  @action = "/"
-  erb :index
-end
+
 
 def prepare_to_check_solution
   @check_solution = session[:check_solution]
@@ -88,41 +78,12 @@ def prepare_to_check_solution
   session[:check_solution] = nil
 end
 
-get '/solver' do
-  @current_solution = blank_sudoku
-  @solution = blank_sudoku
-  @puzzle = blank_sudoku
-  @button_text = "Load inputted puzzle"
-  @action = "/solver"
-  erb :solver
-end
 
-get '/solution' do
-  @current_solution = session[:solution]
-  @solution = session[:solution]
-  @puzzle = session[:puzzle]
-  @button_text = "Back to incomplete puzzle"
-  @action = "/"
-  erb :solution
-end
 
-post '/' do
-  cells = box_order_to_row_order(params["cell"])  
-  session[:current_solution] = cells.map{|value| value.to_i }.join
-  session[:check_solution] = true
-  redirect to("/")
-end
 
-post '/solver' do
-  cells = box_order_to_row_order(params["cell"])  
-  p cells
-  puzzle = cells.map{|value| value.to_i }.join
-  sudoku = solve_user_inputted puzzle
-  session[:current_solution] = puzzle
-  session[:puzzle] = puzzle
-  session[:solution] = sudoku
-  redirect to("/")
-end
+
+
+
 
 
 
