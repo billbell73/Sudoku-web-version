@@ -1,74 +1,7 @@
-body {
-  font-family: "Trebuchet MS";
-}
-
-.container-logo {
-	margin-left: 5em;
-	margin-bottom: 1em;
-}
-
-.logo {
-	display: inline-block;
-	margin-top: 1em;
-	margin-left: 3em;
-}
-
-.key_box_red {
-	width: 30px;
-	height: 30px;
-	background-color: #E68A8A;
-	margin-bottom: 8px;
-}
-
-.key_box_amber {
-	width: 30px;
-	height: 30px;
-	background-color: #FFD175;
-	margin-bottom: 8px;
-}
-
-.key_box_green {
-	width: 30px;
-	height: 30px;
-	background-color: #19D1A3;
-}
-
-h2 {
-	margin-top: 1em;
-	margin-left: 2em;
-	display: inline-block;
-	vertical-align: top;
-}
-
-#red {
-	color:#E68A8A;
-}
-
-#amber {
-	color: #FFD175;
-}
-
-#green {
-	color: #19D1A3;
-}
-
 main {
   font-size: 0;
   display: inline-block;
   margin-right: 5em;
-}
-
-nav {
-	display: inline-block;
-	vertical-align: top
-}
-
-a {
-	display: block;
-}
-
-sup {
-	font-size: 10;
 }
 
 div.box, div.cell {
@@ -97,53 +30,6 @@ div.box {
 	background-color: #19D1A3;
 }
 
-/*#value-provided {
-  background-color: #FFD175;
-}
-
-#correct-guess {
-	background-color: #85FF85;
-}
-
-#incorrect-just-entered {
-  background-color: #E68A8A;
-}
-*/
-p {
-	text-align:left;
-}
-
-h3 {
-	text-align:left;
-	display: inline;
-}
-
-.key_def {
-display: inline-block;
-}
-
-.whole_thing {
-display: inline-block;
-float: left;
-}
-
-.key_whole {
-display: inline-block;
-}
-
-button {
-	display: inline;
-	margin: 15px;
-}
-
-form {
-	display: inline;
-}
-
-
-
-
-
 .animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}.animated.hinge{-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}@-webkit-keyframes rotateOut {
 	0% {
 		-webkit-transform-origin: center center;
@@ -154,6 +40,13 @@ form {
 		-webkit-transform: rotate(200deg);
 		opacity: 0;
 	}
+}
+
+.rotateOut {
+	-webkit-animation-name: rotateOut;
+	-moz-animation-name: rotateOut;
+	-o-animation-name: rotateOut;
+	animation-name: rotateOut;
 }
 
 /*@-moz-keyframes rotateOut {
@@ -197,12 +90,4 @@ form {
 		opacity: 0;
 	}
 }*/
-
-.rotateOut {
-	-webkit-animation-name: rotateOut;
-	-moz-animation-name: rotateOut;
-	-o-animation-name: rotateOut;
-	animation-name: rotateOut;
-}
-
 
