@@ -15,15 +15,25 @@ def random_sudoku
 end
 
 
-def puzzle sudoku
+def puzzle sudoku, level=:medium
   puzzle = []
+  difficulty = {hard: 50, medium: 60, easy: 70}
   sudoku.each do |val|
     random_number = Random.rand(0..100)
-    if random_number < 60
-      puzzle << val
-    else
+    if random_number > difficulty[level]
       puzzle << "0"
+    else
+      puzzle << val
     end
   end
   puzzle
 end
+
+
+def generate_puzzle level
+  sudoku = random_sudoku
+  session[:solution] = sudoku
+  session[:puzzle] = puzzle(sudoku, level)
+  session[:current_solution] = session[:puzzle] 
+end  
+
