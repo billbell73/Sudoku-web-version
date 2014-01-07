@@ -37,13 +37,12 @@
 
     <main id="sudoku">
 
-      <form action=<%= @action %> method="post">
+      <form action=<%= @action %> method=<%= @method %>>
         
         <%= partial :grid %>
 
-        
-
         <button><%= @button_text %></button>
+        
       </form>
       <%= yield %>
 
@@ -51,10 +50,10 @@
 
     <nav>
 
-      <a href="/">Generate Easy Puzzle</a>
-      <a href="/">Generate Hard Puzzle</a>
+      <a href="/">New easy puzzle</a>
+      <a href="/">New hard puzzle</a>
       <!-- <a href="/">Try new Swivel-doku<sup>TM</sup></a> -->
-      <a href="/solver">Load your own puzzle</a>
+      <a href="/solver">Load own puzzle</a>
 
     </nav>
 

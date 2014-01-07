@@ -7,8 +7,7 @@ get '/' do
   if @wrong_guesses_third_time
     replace_wrong_guesses_with_zero @solution, @current_solution
   end
-  @button_text = "Check values entered"
-  @action = "/"
+  insert_in_main_form "/", "post", "Check values entered"
   erb :index
 end
 

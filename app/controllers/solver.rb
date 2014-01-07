@@ -2,8 +2,7 @@ get '/solver' do
   @current_solution = blank_sudoku
   @solution = blank_sudoku
   @puzzle = blank_sudoku
-  @button_text = "Load inputted puzzle"
-  @action = "/solver"
+  insert_in_main_form "/solver", "post", "Load inputted puzzle"
   erb :solver
 end
 
@@ -17,3 +16,5 @@ post '/solver' do
   session[:solution] = sudoku
   redirect to("/")
 end
+
+

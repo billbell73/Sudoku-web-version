@@ -14,6 +14,7 @@ require_relative 'helpers/views_helpers'
 require_relative 'helpers/check_helpers'
 require_relative 'helpers/new_puzzle_helpers'
 require_relative 'helpers/solver_helpers'
+require_relative 'helpers/form_helpers'
 
 
 enable :sessions
