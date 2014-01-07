@@ -40,6 +40,10 @@ a:active {
 	color:#19D1A3;
 }  
 
+body#solver a:last-child {
+	color:#19D1A3;
+}  
+
 .key_def {
 display: inline-block;
 }
