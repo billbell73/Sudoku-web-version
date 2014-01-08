@@ -14,8 +14,10 @@ h2 {
 	margin-left: 2em;
 	display: inline-block;
 	vertical-align: top;
-	font-size: 1.5em;
+	font-size: 1.8em;
 	font-weight: bold;
+	border: solid 1px #20538D;
+	padding: 4px;
 }
 
 #red {
