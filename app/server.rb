@@ -10,6 +10,7 @@ require_relative 'controllers/root'
 require_relative 'controllers/solver'
 require_relative 'controllers/solution'
 require_relative 'controllers/new_easy'
+require_relative 'controllers/new_hard'
 
 require_relative 'helpers/views_helpers'
 require_relative 'helpers/check_helpers'

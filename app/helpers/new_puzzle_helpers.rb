@@ -1,9 +1,6 @@
 def generate_new_puzzle_if_necessary
-  return if session[:current_solution]
-  sudoku = random_sudoku
-  session[:solution] = sudoku
-  session[:puzzle] = puzzle(sudoku)
-  session[:current_solution] = session[:puzzle]    
+  return if session[:current_solution]  
+  generate_puzzle :medium
 end
 
 
@@ -17,7 +14,7 @@ end
 
 def puzzle sudoku, level=:medium
   puzzle = []
-  difficulty = {hard: 50, medium: 60, easy: 70}
+  difficulty = {hard: 45, medium: 60, easy: 70}
   sudoku.each do |val|
     random_number = Random.rand(0..100)
     if random_number > difficulty[level]

@@ -33,7 +33,7 @@ a {
 }
 
 a:hover {
-	color:#FFD175;
+	color:#19D1A3;
 }   
 
 a:active {
@@ -41,7 +41,7 @@ a:active {
 }  
 
 body#solver a:last-child {
-	color:#19D1A3;
+	color:#FFD175;
 }  
 
 .key_def {
@@ -55,6 +55,13 @@ display: inline-block;
 button {
 	display: inline;
 	margin: 15px;
+    padding: 10px 15px;
+    background: #19D1A3;
+    color: black;
+    border: 0px;
+    cursor: pointer;
+    font-family: "Trebuchet MS";
+	font-size: 12px;
 }
 
 form {
