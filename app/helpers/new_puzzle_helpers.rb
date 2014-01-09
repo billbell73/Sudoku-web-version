@@ -12,7 +12,7 @@ def random_sudoku
 end
 
 
-def puzzle sudoku, level=:medium
+def puzzle sudoku, level
   puzzle = []
   difficulty = {hard: 45, medium: 60, easy: 70}
   sudoku.each do |val|
