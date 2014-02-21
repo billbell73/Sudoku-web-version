@@ -26,14 +26,18 @@ body {
 }
 
 nav {
-	display: inline-block;
-	vertical-align: top
+	display: block;
+	vertical-align: top;
+	margin-left: 7em;
+	margin-bottom: 1em;
+	margin-top: 1.5em;
 }
 
 a {
-	display: block;
+	/*display: block;*/
 	color:#E68A8A;
 	color: #000;
+	margin: 5px;
 }
 
 a:hover {
