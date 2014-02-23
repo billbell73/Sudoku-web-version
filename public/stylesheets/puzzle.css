@@ -1,7 +1,8 @@
 main {
   font-size: 0;
   display: inline-block;
-  margin-right: 5em;
+  /*width: 600px;*/
+  margin: 20px 0px 10px 0px;
 }
 
 div.box, div.cell {
