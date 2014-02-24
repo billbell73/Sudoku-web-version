@@ -3,6 +3,7 @@ $(document).ready(function(){
   	setTimeout(function(){window.location.reload();},1000);
 	}
 	if($('.animated.rotateOut').length) {
-		window.location.reload();
+		setTimeout(function(){window.location.reload();},1000);
+		// window.location.reload();
 	}
 })
