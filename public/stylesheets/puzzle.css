@@ -50,7 +50,7 @@ div.box {
 	animation-name: rotateOut;
 }
 
-/*@-moz-keyframes rotateOut {
+@-moz-keyframes rotateOut {
 	0% {
 		-moz-transform-origin: center center;
 		-moz-transform: rotate(0);
@@ -90,5 +90,5 @@ div.box {
 		transform: rotate(200deg);
 		opacity: 0;
 	}
-}*/
+}
 

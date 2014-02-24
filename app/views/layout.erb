@@ -61,22 +61,25 @@
    
 
     <section class="key_whole">
+
+      <h3>Key</h3>
+
       
-      <div class="red_box" id="flash"></div>
-      <div class="key_def" id="flash">
-        <%= flash[:incorrect_msg] %>
+      <div class="key_entry">
+        <div class="red_box key_box"></div>
+        <span class="key_def">Guessed wrong</span>
       </div>
       
-      <div class="amber_box"></div>
-      <div class="key_def" id="flash">
-        <%= flash[:value_provided] %>
+      <div class="key_entry">
+        <div class="amber_box key_box"></div>
+        <span class="key_def">Original puzzle</span>
       </div>
       
-      <div class="green_box"></div>
-      <div class="key_def" id="flash">
-        <%= flash[:inputted_correctly] %>
+      <div class="key_entry">
+        <div class="green_box key_box"></div>
+        <span class="key_def">Correct.  Woohoo!</span>
       </div>
-      
+    
     </section>
 
     
