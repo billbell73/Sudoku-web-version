@@ -49,20 +49,6 @@ body#solver a:last-child {
 	color:#FFD175;
 }  
 
-.key_def {
-display: inline-block;
-vertical-align: top;
-padding-top: 9px;
-
-}
-
-.key_whole {
-display: inline-block;
-vertical-align: top;
-margin: 120px 0px 0px 80px;
-/*display: none;*/
-}
-
 button {
 	display: inline;
 	margin: 15px;
@@ -86,24 +72,12 @@ button {
 }
 
 button:hover {
-    background: #19D1A3;
-    text-decoration: none;
+  background: #19D1A3;
+  text-decoration: none;
 }
 
 form {
 	display: inline;
-}
-
-.key_box {
-	display: inline-block;
-}
-
-.key_entry{
-}
-
-h3 {
-	margin: 0px 0px 15px 30px;
-	text-decoration: underline;
 }
 
 

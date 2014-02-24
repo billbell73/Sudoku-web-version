@@ -5,9 +5,6 @@ def prepare_to_check_solution
   @wrong_guesses_third_time = session[:wrong_guesses_third_time]
   session[:wrong_guesses_third_time] = nil
   if @check_solution
-    flash[:incorrect_msg] = "Guessed wrong"
-    flash[:value_provided] = "Original puzzle"
-    flash[:inputted_correctly] = "Correct.  Woohoo!"
     session[:wrong_guesses_second_time] = true
   end
   if @wrong_guesses_second_time
