@@ -1,6 +1,6 @@
 #Stop-go-ku
 
-Check out deployed project [website](http://phototo.herokuapp.com) hosted on Heroku (please note site will take 10 seconds to wake up)
+Check out [website](http://stop-go-ku.herokuapp.com/) of deployed project hosted on Heroku (please note site will take 10 seconds to wake up).
 
 ##Description
 
